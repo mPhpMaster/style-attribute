@@ -1,11 +1,21 @@
-# Laravel HTML style attribute builder
+## Laravel HTML style attribute builder
+
+### Installation:
+```
+composer require mphpmaster/style-attribute
+```
+
+### Composer Commands:
 
 - `composer a:routes` Use `artisan route:list` and write the output to `routes.txt`.
+
 - `composer c:c` Use `artisan` to clear **cache**, **route**, **config** and **view** files.
+
 - `composer m:c` Create `sessions`, `views` and `sessions` directories in `storage/framework` then chomd `storage/framework` 775 for the user as owner.
 
 
-**Example:** :
+### Example :
+
 ```
   $p = app('style-attribute')
         ->cursor('pointer', true)
