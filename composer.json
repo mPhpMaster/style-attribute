@@ -1,0 +1,57 @@
+{
+    "name": "mphpmaster/style-attribute",
+    "description": "Laravel HTML style attribute builder",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "html",
+        "style",
+        "builder",
+        "attribute",
+        "hlack"
+    ],
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": ">=7",
+        "laravel/helpers": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mPhpMaster",
+            "email": "59211285+mPhpMaster@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mPhpMaster\\StyleAttribute\\": "src/"
+        },
+        "files": [
+            "src/Helpers/Functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mPhpMaster\\StyleAttribute\\Providers\\StyleAttributeProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "c:c": [
+            "@php artisan cache:clear",
+            "@php artisan route:clear",
+            "@php artisan config:clear",
+            "@php artisan view:clear"
+        ],
+        "a:routes": [
+            "@php artisan route:list --no-ansi > routes.txt"
+        ],
+        "m:c": [
+            "mkdir -p storage/framework/{sessions,views,cache}",
+            "chmod -R 775 storage/framework",
+            "chown -R `whoami`:nobody storage/framework"
+        ]
+    }
+}
